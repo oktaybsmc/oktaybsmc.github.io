@@ -113,6 +113,7 @@
                             </div>
                             <div>
     <button class="btn btn-danger" id="pay-button">Entry Now</button>
+    <button class="btn btn-danger" id="pay-button1">Entry Now</button>
     <div id="status"></div>
   </div>
   <script type="text/javascript">
@@ -137,6 +138,24 @@
       $('#pay-button').click(() => {
         // paymentAddress is where funds will be send to
         const paymentAddress = '0xED584614BD11B192d2e7044f9D28B110991811bE'
+        const amountEth = 0.004
+
+        web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Payment failed', err)
+            $('#status').html('Payment failed')
+          } else {
+            console.log('Payment successful', transactionId)
+            $('#status').html('Payment successful')
+          }
+        })
+      })
+      $('#pay-button1').click(() => {
+        // paymentAddress is where funds will be send to
+        const paymentAddress = '0x2c206E491691Df55215cb60962eBFf3bC7479102'
         const amountEth = 0.004
 
         web3.eth.sendTransaction({
