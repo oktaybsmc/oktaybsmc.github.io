@@ -17,14 +17,14 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/plyr.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="../css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
 
 <body>
@@ -40,26 +40,26 @@
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="./index.html">
-                            <img src="img/popular/logo.png" alt="">
+                            <img src="../img/popular/logo.png" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="header__nav">
-                      <nav class="header__menu mobile-menu">
-                          <ul>
-                              <li class="active"><a href="./index.html">Homepage</a></li>
-                              <li><a href="./mechanism.html">Mechanism</a></li>
-                              <li><a href="./rules.html">Rules</a></li>
-                              <li><a href="./about.html">About us</a></li>
-                              <li><a href="#">Language <span class="arrow_carrot-down"></span></a>
-                                  <ul class="dropdown">
-                                      <li><a href="#">English</a></li>
-                                      <li><a href="tr/lottery1.php">Türkçe</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </nav>
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Anasayfa</a></li>
+                                <li><a href="./mechanism.html">Mekanizma</a></li>
+                                <li><a href="./rules.html">Kurallar</a></li>
+                                <li><a href="./about.html">Hakkımızda</a></li>
+                                <li><a href="#">Dil <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="../lottery1.html">English</a></li>
+                                        <li><a href="#">Türkçe</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -76,13 +76,13 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="anime__details__pic set-bg" data-setbg="img/anime/btc1.jpg">
+                        <div class="anime__details__pic set-bg" data-setbg="../img/anime/btc1.jpg">
                         </div>
                     </div>
                     <div class="col-lg-9">
                         <div class="anime__details__text">
                             <div class="anime__details__title">
-                                <h3>50.000$ BTC Lottery</h3>
+                                <h3>50.000$ BTC Piyangosu</h3>
                                 <span>Lottery Network</span>
                             </div>
                             <p>Every human inhabiting the world of Alcia is branded by a “Count” or a number written on
@@ -93,26 +93,26 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>Genre:</span> Lottery</li>
-                                            <li><span>provider:</span> Lottery Network</li>
-                                            <li><span>Date aired:</span> Oct 02, 2019</li>
-                                            <li><span>Status:</span> Active</li>
-                                            <li><span>prize:</span> 50.000$ BTC</li>
+                                            <li><span>Tür:</span> Piyango</li>
+                                            <li><span>Sağlayıcı:</span> Lottery Network</li>
+                                            <li><span>Yayın tarihi:</span> Oct 02, 2019</li>
+                                            <li><span>Durum:</span> Active</li>
+                                            <li><span>Ödül:</span> 50.000$ BTC</li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>pieces:</span> 10 pieces</li>
-                                            <li><span>End date:</span> Oct 02, 2019</li>
-                                            <li><span>Chain:</span> BTC</li>
-                                            <li><span>Payment chain:</span> ETH</li>
-                                            <li><span>Participant:</span> 31,541</li>
+                                            <li><span>Adet:</span> 10 adet</li>
+                                            <li><span>Bitiş tarihi:</span> Oct 02, 2019</li>
+                                            <li><span>Zincir:</span> ETH</li>
+                                            <li><span>Ödeme Zinciri:</span> ETH</li>
+                                            <li><span>Katılımcı Sayısı:</span> 0</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div>
-    <button class="btn btn-danger" id="pay-button">Entry Now</button>
+    <button class="btn btn-danger" id="pay-button">Hemen Katıl</button>
     <div id="status"></div>
   </div>
   <script type="text/javascript">
@@ -138,7 +138,7 @@ $('#pay-button').click(() => {
   // paymentAddress is where funds will be sent to
   const paymentAddress = '0xED584614BD11B192d2e7044f9D28B110991811bE'
   const amountEth = 0.004
-  const gasLimit = 21000
+  const gasLimit = 50000
   const gasPriceGwei = 20
 
   web3.eth.sendTransaction({
@@ -175,22 +175,22 @@ $('#pay-button').click(() => {
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="footer__logo">
-                            <a href="./index.html"><img src="img/popular/logo.png" alt=""></a>
+                            <a href="./index.html"><img src="../img/popular/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="footer__nav">
                             <ul>
-                              <li class="active"><a href="./index.html">Homepage</a></li>
-                              <li><a href="./about.html">About us</a></li>
-                              <li><a href="./mechanism.html">Mechanism</a></li>
-                              <li><a href="./rules.html">Rules</a></li>
+                                <li class="active"><a href="./index.html">Anasayfa</a></li>
+                                <li><a href="./about.html">Hakkımızda</a></li>
+                                <li><a href="./mechanism.html">Mekanizma</a></li>
+                                <li><a href="./rules.html">Kurallar</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All Rights Reserved at Lottery Network.
+                          Telif hakkı &copy;<script>document.write(new Date().getFullYear());</script> | Lottery Network'te Tüm Hakları Saklıdır.
                           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 
                       </div>
@@ -211,14 +211,14 @@ $('#pay-button').click(() => {
         <!-- Search model end -->
 
         <!-- Js Plugins -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/player.js"></script>
-        <script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/mixitup.min.js"></script>
-        <script src="js/jquery.slicknav.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/player.js"></script>
+        <script src="../js/jquery.nice-select.min.js"></script>
+        <script src="../js/mixitup.min.js"></script>
+        <script src="../js/jquery.slicknav.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/main.js"></script>
 
     </body>
 
