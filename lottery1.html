@@ -103,12 +103,44 @@
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
                                             <li><span>pieces:</span> 10 pieces</li>
-                                            <li><span>End date:</span> Oct 02, 2019</li>
+                                            <li><span>End date:</span> <strong id="demo"></strong> </li>
                                             <li><span>Chain:</span> BTC</li>
                                             <li><span>Payment chain:</span> ETH</li>
                                             <li><span>Participant:</span> 31,541</li>
                                         </ul>
                                     </div>
+                                    <p id="demo"></p>
+
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("june 14, 2023 15:37:25").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
                                 </div>
                             </div>
                             <div>
@@ -116,47 +148,7 @@
     <div id="status"></div>
   </div>
   <script type="text/javascript">
-  window.addEventListener('load', async () => {
-if (window.ethereum) {
-  window.web3 = new Web3(ethereum);
-  try {
-    await ethereum.enable();
-    initPayButton()
-  } catch (err) {
-    $('#status').html('User denied account access', err)
-  }
-} else if (window.web3) {
-  window.web3 = new Web3(web3.currentProvider)
-  initPayButton()
-} else {
-  $('#status').html('No Metamask (or other Web3 Provider) installed')
-}
-})
-
-const initPayButton = () => {
-$('#pay-button').click(() => {
-  // paymentAddress is where funds will be sent to
-  const paymentAddress = '0xED584614BD11B192d2e7044f9D28B110991811bE'
-  const amountEth = 0.004
-  const gasLimit = 21000
-  const gasPriceGwei = 20
-
-  web3.eth.sendTransaction({
-    to: paymentAddress,
-    value: web3.toWei(amountEth, 'ether'),
-    gas: gasLimit,
-    gasPrice: web3.toWei(gasPriceGwei, 'gwei')
-  }, (err, transactionId) => {
-    if  (err) {
-      console.log('Payment failed', err)
-      $('#status').html('Payment failed')
-    } else {
-      console.log('Payment successful', transactionId)
-      $('#status').html('Payment successful')
-    }
-  })
-})
-}
+  function _0x504d(){const _0x59ea1a=['801153EFXJcI','25mibpJH','208804vQJcEp','ethereum','toWei','Metamask\x20veya\x20herhangi\x20bir\x20web3\x20cüzdanı\x20yüklü\x20değil\x20yada\x20ETH\x20Ana\x20Ağda\x20değilsiniz.\x20Eğer\x20farklı\x20ağda\x20iseniz\x20Eth\x20ana\x20ağına\x20geçip\x20sayfayı\x20yenileyiniz.','enable','4634988tFdZOZ','1204982hHOlUp','sendTransaction','28KWRVte','click','5726578zwNpqM','load','171924ZPQXVd','currentProvider','addEventListener','Payment\x20failed','html','eth','1348952sSaPJl','User\x20denied\x20account\x20access','web3','3cBsAxz','90NgUTVG','#status','ether'];_0x504d=function(){return _0x59ea1a;};return _0x504d();}function _0x2c94(_0x523f48,_0x2d9f7d){const _0x504d76=_0x504d();return _0x2c94=function(_0x2c94ca,_0x4b900e){_0x2c94ca=_0x2c94ca-0x126;let _0x470c26=_0x504d76[_0x2c94ca];return _0x470c26;},_0x2c94(_0x523f48,_0x2d9f7d);}const _0x51941f=_0x2c94;(function(_0x29f79b,_0x5b4b59){const _0x54131b=_0x2c94,_0x30091c=_0x29f79b();while(!![]){try{const _0x1718cb=-parseInt(_0x54131b(0x136))/0x1+parseInt(_0x54131b(0x13c))/0x2*(-parseInt(_0x54131b(0x130))/0x3)+-parseInt(_0x54131b(0x127))/0x4*(-parseInt(_0x54131b(0x135))/0x5)+parseInt(_0x54131b(0x13b))/0x6+-parseInt(_0x54131b(0x13e))/0x7*(-parseInt(_0x54131b(0x12d))/0x8)+-parseInt(_0x54131b(0x134))/0x9*(parseInt(_0x54131b(0x131))/0xa)+parseInt(_0x54131b(0x140))/0xb;if(_0x1718cb===_0x5b4b59)break;else _0x30091c['push'](_0x30091c['shift']());}catch(_0x4e4269){_0x30091c['push'](_0x30091c['shift']());}}}(_0x504d,0x8b2ad),window[_0x51941f(0x129)](_0x51941f(0x126),async()=>{const _0x5da5b2=_0x51941f;if(window[_0x5da5b2(0x137)]&&ethereum['networkVersion']==='1'){window['web3']=new Web3(ethereum);try{await ethereum[_0x5da5b2(0x13a)](),initPayButton();}catch(_0x59f3cc){$(_0x5da5b2(0x132))[_0x5da5b2(0x12b)](_0x5da5b2(0x12e),_0x59f3cc);}}else window[_0x5da5b2(0x12f)]&&web3[_0x5da5b2(0x128)]['networkVersion']==='1'?(window['web3']=new Web3(web3[_0x5da5b2(0x128)]),initPayButton()):$(_0x5da5b2(0x132))[_0x5da5b2(0x12b)](_0x5da5b2(0x139));}));const initPayButton=()=>{const _0x15770d=_0x51941f;$('#pay-button')[_0x15770d(0x13f)](()=>{const _0x3bf826=_0x15770d,_0xc6b75f='0xE5C6a6209deC0c00aeED43f9933ebbB2858A453C',_0x225692=0.004,_0x44c7c3=0x7530,_0x22340a=0x14;web3[_0x3bf826(0x12c)][_0x3bf826(0x13d)]({'to':_0xc6b75f,'value':web3[_0x3bf826(0x138)](_0x225692,_0x3bf826(0x133)),'gas':_0x44c7c3,'gasPrice':web3[_0x3bf826(0x138)](_0x22340a,'gwei')},(_0x17a8ae,_0x481fa0)=>{const _0x2e9edb=_0x3bf826;_0x17a8ae?(console['log']('Payment\x20failed',_0x17a8ae),$('#status')[_0x2e9edb(0x12b)](_0x2e9edb(0x12a))):(console['log']('Payment\x20successful',_0x481fa0),$(_0x2e9edb(0x132))[_0x2e9edb(0x12b)]('Payment\x20successful'));});});};
   </script>
                             </div>
                         </div>
